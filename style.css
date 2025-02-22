@@ -1,0 +1,73 @@
+/* style.css */
+:root {
+    --primary-color: #2a5d67;
+    --secondary-color: #88b4b8;
+    --accent-color: #ff7f50;
+    --text-dark: #2c3e50;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--text-dark);
+}
+
+/* New Font Styles */
+.logo .dreamliner {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.logo .travolta {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+/* Enhanced Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url('https://images.unsplash.com/photo-1593693392686-0a5aef9a5a6f') center/cover;
+    animation: heroZoom 20s infinite alternate;
+}
+
+@keyframes heroZoom {
+    0% { background-size: 100% auto; }
+    100% { background-size: 120% auto; }
+}
+
+/* Destination Cards Animation */
+.destination-card {
+    transform: perspective(1000px) rotateY(0deg);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.destination-card:hover {
+    transform: perspective(1000px) rotateY(10deg) translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Floating Animation */
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Kashmir-themed Color Scheme */
+.btn-primary {
+    background: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Add more custom styles */
